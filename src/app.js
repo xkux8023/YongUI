@@ -6,5 +6,8 @@ Vue.component('y-button',Button)
 Vue.component('y-icon',Icon)
 
 new Vue({
-    el:"#app"
+    el:"#app",
+    data: {
+      loading: false
+    }
 })
