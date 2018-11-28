@@ -1,12 +1,15 @@
 <template>
     <button class="y-button">
+      <svg class="icon" v-if="icon" aria-hidden="true">
+        <use :xlink:href=`#i-${icon}`></use>
+      </svg>
       <slot></slot>
     </button>
 </template>
 
 <script>
 export default {
-
+  props: ['icon']
 }
 </script>
 
