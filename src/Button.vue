@@ -1,8 +1,6 @@
 <template>
     <button class="y-button" :class="{[`icon-${iconPosition}`]:true}">
-      <svg class="icon" v-if="icon" aria-hidden="true">
-        <use :xlink:href=`#i-${icon}`></use>
-      </svg>
+      <y-icon icon="settings"></y-icon>
       <div class="content">
         <slot></slot>
       </div>
@@ -18,11 +16,7 @@ export default {
       type: String,
       default: 'left',
       validator(value) {
-        if (value !== 'left' && value !== 'right') {
-          return false
-        } else {
-          return true
-        }
+        return value === 'left' || value === 'right'
       }
     }
   }
