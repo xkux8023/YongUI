@@ -23,7 +23,16 @@
 </head>
 <body>
     <div id="app">
-      <y-button icon-position="left" icon="settings" :loading="loading" @click="loading = !loading">JavaScript</y-button>
+        <y-button icon-position="left" icon="settings" :loading="loading" @click="loading = !loading">JavaScript</y-button>
+        <y-button-group>
+            <y-button icon="left">上一页</y-button>
+            <y-button >更多</y-button>
+            <y-button icon="right" icon-position="right">下一页</y-button>
+        </y-button-group>
+        <y-button-group>
+            <!-- 监测子元素是否全是 y-button -->
+            <span>abc</span>
+        </y-button-group>
     </div>
     <script src="//at.alicdn.com/t/font_923333_1zr8m6cu569.js"></script>
     <!-- <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script> -->
