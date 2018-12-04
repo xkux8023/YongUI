@@ -6,6 +6,7 @@
   "author": "xkux8023<326712928@qq.com>",
   "license": "MIT",
   "scripts": {
+    "parcel":"./node_modules/.bin/parcel ./index.html",
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
