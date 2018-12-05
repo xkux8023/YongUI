@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Icon from './Icon.vue'
+import Icon from "./Icon.vue";
 export default {
   // props: ['icon', 'iconPosition']
   props: {
@@ -20,24 +20,28 @@ export default {
     },
     iconPosition: {
       type: String,
-      default: 'left',
+      default: "left",
       validator(value) {
-        return value === 'left' || value === 'right'
+        return value === "left" || value === "right";
       }
     }
   },
   components: {
     "y-icon": Icon
   }
-}
+};
 </script>
 
 <style lang="scss">
 @keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.y-button{
+.y-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -48,17 +52,34 @@ export default {
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
   background: var(--button-bg);
-  &:hover {border: 1px solid var(--border-color-hover);}
-  &:active {background: var(--button-active-bg);}
-  &:focus {outline: none;}
+  &:hover {
+    border: 1px solid var(--border-color-hover);
+  }
+  &:active {
+    background: var(--button-active-bg);
+  }
+  &:focus {
+    outline: none;
+  }
   .loading {
     animation: spin 1s infinite linear;
   }
-  > .icon{order: 1;margin-right: .3em;}
-  > .content{order: 2}
-  &.icon-right{
-      .content{order: 1}
-      .icon{order: 2;margin-left: .3em;margin-right: 0;}
+  > .icon {
+    order: 1;
+    margin-right: 0.3em;
+  }
+  > .content {
+    order: 2;
+  }
+  &.icon-right {
+    .content {
+      order: 1;
+    }
+    .icon {
+      order: 2;
+      margin-left: 0.3em;
+      margin-right: 0;
+    }
   }
 }
 </style>
